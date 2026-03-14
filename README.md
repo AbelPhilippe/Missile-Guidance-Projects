@@ -2,10 +2,8 @@
   Missile Guidance: Project 1
 </h1>
 <h2 align=center>
-  Mission:
+  Mission: Sprint ABM Interception
 </h2>
-
-# Sprint ABM Interception Simulation
 
 ## Mission Overview
 
@@ -17,6 +15,10 @@ This project simulates a Cold War–era ballistic missile defense scenario. In t
 
 
 To defend against the incoming threat, the U.S. deploys the **Sprint anti-ballistic missile (ABM)** interceptor.
+
+<p align=center>
+  <img src="images/Sprint_test_stand_featured.png">
+<p>
 
 The objective of the simulation is to model the interception dynamics between the incoming ballistic missile and the defensive interceptor. The Sprint missile must rapidly launch, accelerate to hypersonic speed, and reach the predicted intercept point before the hostile warhead reaches its target.
 
