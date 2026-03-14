@@ -4,14 +4,16 @@
 
 ## Mission Overview
 
-This project simulates a Cold War–era ballistic missile defense scenario. In this mission, a hostile intercontinental ballistic missile launched from the **Soviet Union** is detected traveling toward the **United States**.
+Early-warning radar systems have detected the launch of a hostile **intercontinental ballistic missile (ICBM)** originating from the territory of the **Soviet Union**. The missile has entered its ballistic trajectory and is currently traveling toward the United States at hypersonic velocity.
+
+Tracking data from strategic radar installations indicates that the incoming missile is traveling at approximately **7.2 km/s (Mach 21)** during its midcourse phase. Based on current trajectory calculations, the warhead is projected to reenter the atmosphere within minutes and continue toward its target area.
 
 <p align=center>
   <img src="images/SovieticMissile.jpg">
 </p>
 
 
-To defend against the incoming threat, the U.S. deploys the **Sprint anti-ballistic missile (ABM)** interceptor.
+To defend against the incoming threat, the **United States**. deploys the **Sprint anti-ballistic missile (ABM)** interceptor.
 
 <p align=center>
   <img src="images/Sprint_test_stand_featured.png">
