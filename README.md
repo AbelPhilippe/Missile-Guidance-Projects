@@ -26,7 +26,7 @@ This simulation focuses on the physical dynamics of missile flight, including:
 * Guidance toward the predicted interception point
 * Terminal interception event
 
-The scenario reflects concepts from the Cold War missile defense systems developed under the **Safeguard Program**, designed to protect strategic assets from incoming nuclear threats.
+Your mission reflects concepts from the Cold War missile defense systems developed under the **Safeguard Program**, designed to protect strategic assets from incoming nuclear threats.
 
 ---
 
