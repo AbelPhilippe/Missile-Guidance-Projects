@@ -11,6 +11,9 @@
 *.sln.docstates
 *.env
 
+# Hidden tests
+*.py
+
 # Venv
 venv/
 .venv/
