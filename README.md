@@ -12,6 +12,13 @@ Tracking data from strategic radar installations indicates that the incoming mis
   <img src="images/SovieticMissile.jpg">
 </p>
 
+* **Launch origin:** Soviet Union
+* **Detection time:** 03:17 UTC
+* **Estimated velocity:** ~7.2 km/s (Mach 21)
+* **Estimated altitude (midcourse):** ~1,100 km
+* **Trajectory type:** Intercontinental ballistic trajectory
+* **Projected impact window:** < 20 minutes
+
 
 To defend against the incoming threat, the **United States**. deploys the **Sprint anti-ballistic missile (ABM)** interceptor.
 
