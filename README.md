@@ -44,16 +44,12 @@ To defend against the incoming threat, the **United States**. deploys the **Spri
 
 The Sprint missile must rapidly launch, accelerate to hypersonic speed, and reach the predicted intercept point before the hostile warhead reaches its target. The Missile carries the **W66 nuclear warhead**, an enhanced radiation nuclear warhead designed specifically for anti-ballistic missile defense.
 
-
-This simulation focuses on the physical dynamics of missile flight, including:
+This mission reflects concepts from the Cold War missile defense systems developed under the **Safeguard Program**, designed to protect strategic assets from incoming nuclear threats.
 
 * Detection and tracking of the incoming ballistic missile
 * Launch and rapid acceleration of the interceptor
 * Guidance toward the predicted interception point
 * Terminal interception event
-
-Your mission reflects concepts from the Cold War missile defense systems developed under the **Safeguard Program**, designed to protect strategic assets from incoming nuclear threats.
-
 ---
 
 ## Defensive System: Sprint Anti-Ballistic Missile
@@ -84,12 +80,6 @@ The Sprint interceptor carried a **W66 nuclear warhead**.
 
 Rather than requiring a direct hit, the nuclear warhead would disable or destroy the incoming reentry vehicle within a certain radius of the detonation point.
 
----
-
-## Target Threat
-
-The incoming target in this simulation represents a ballistic missile launched from the **Soviet Union** during a hypothetical strategic attack scenario.
-
 Ballistic missiles follow a three-phase trajectory:
 
 1. **Boost phase** – rocket engines propel the missile into space
@@ -97,31 +87,3 @@ Ballistic missiles follow a three-phase trajectory:
 3. **Terminal phase** – the warhead reenters the atmosphere toward its target
 
 The Sprint interceptor is designed specifically to operate during the **terminal phase**, where reaction time is extremely limited.
-
----
-
-## Simulation Goals
-
-The goal of this project is to model and visualize the dynamics of missile interception, including:
-
-* Ballistic trajectory modeling
-* Hypersonic interceptor acceleration
-* Interception geometry
-* Guidance and pursuit behavior
-* 3DOF and later 6DOF flight dynamics
-
-This simulation provides a computational framework for studying missile defense dynamics and high-speed intercept scenarios.
-
----
-
-## Project Scope
-
-This repository will evolve through multiple simulation stages:
-
-* **3DOF dynamics** — simplified translational motion
-* **6DOF dynamics** — full rigid-body flight dynamics
-* **Guidance algorithms** — pursuit and intercept logic
-* **Trajectory visualization** — 3D simulation of intercept events
-
-The final objective is to create a physics-based simulation of missile interception scenarios inspired by historical missile defense systems.
-
