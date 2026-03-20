@@ -14,4 +14,4 @@ d2 = 0                  # distance vector from target center of mass to tracking
 R = 0                   # range vector from missile center of mass to target center of mass, m
 
 def seeker():
-    sigma = 
+    sigma =
