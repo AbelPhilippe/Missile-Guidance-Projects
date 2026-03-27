@@ -16,7 +16,7 @@ H = 7200
 A = 0.045
 
 # -------------------------
-# ESTADO INICIAL (3D)
+# INITIAL STATE (3D)
 # -------------------------
 
 missile_pos = np.array([0.0, 0.0, 0.0])
@@ -26,14 +26,14 @@ target_pos = np.array([18000.0, 5000.0, 35000.0])
 target_vel = np.array([-4200.0, -500.0, -6500.0])
 
 # -------------------------
-# PARAMETROS
+# PARAMETERS
 # -------------------------
 
 NAV_CONST = 4.0
 MAX_GUIDANCE_ACCEL = 90 * 9.81
 
 # -------------------------
-# MODELO SPRINT
+# SPRINT MODEL
 # -------------------------
 
 def missile_mass(t):
@@ -74,7 +74,7 @@ def drag_coefficient(speed):
     else: return 0.9
 
 # -------------------------
-# PROPULSÃO
+# PROPULSION
 # -------------------------
 
 def propulsion(t, vel, rel_pos):
@@ -136,7 +136,7 @@ def drag(pos, vel, m):
     return -(D / m) * unit(vel)
 
 # -------------------------
-# SIMULAÇÃO
+# SIMULATION
 # -------------------------
 
 missile_traj = []
@@ -194,15 +194,15 @@ ax.set_title(
     pad=20
 )
 
-# trajetórias
+# trajectories
 missile_line, = ax.plot([], [], [], label="Sprint ABM", color='blue')
 target_line, = ax.plot([], [], [], label="Ogive", color='red')
 
-# linhas verticais
+# vertical lines
 missile_alt_line, = ax.plot([], [], [], linestyle='dashed', color='blue')
 target_alt_line, = ax.plot([], [], [], linestyle='dashed', color='red')
 
-# labels (criados vazios)
+# labels (created empty)
 missile_label = ax.text2D(0, 0, "Sprint ABM", color='blue')
 target_label = ax.text2D(0, 0, "Ogive", color='red')
 
@@ -212,7 +212,7 @@ text = ax.text2D(0.05, 0.95, "", transform=ax.transAxes)
 ax.legend()
 
 # -------------------------
-# ANIMAÇÃO
+#       ANIMATION
 # -------------------------
 
 def update(frame):
@@ -227,7 +227,7 @@ def update(frame):
     tx, ty, tz = target_traj[frame]
 
     # -------------------------
-    # LABELS HORIZONTAIS (REAL)
+    # HORIZONTAL LABELS (REAL)
     # -------------------------
     mx2, my2, _ = proj3d.proj_transform(mx, my, mz, ax.get_proj())
     tx2, ty2, _ = proj3d.proj_transform(tx, ty, tz, ax.get_proj())
@@ -236,7 +236,7 @@ def update(frame):
     target_label.set_position((tx2, ty2))
 
     # -------------------------
-    # LINHAS VERTICAIS
+    #      VERTICAL LINES
     # -------------------------
     missile_alt_line.set_data([mx, mx], [my, my])
     missile_alt_line.set_3d_properties([0, mz])
