@@ -4,7 +4,7 @@ from matplotlib.animation import FuncAnimation
 from mpl_toolkits.mplot3d import proj3d
 
 # -------------------------
-# CONFIG
+#         CONFIG
 # -------------------------
 
 dt = 0.0015
@@ -16,7 +16,7 @@ H = 7200
 A = 0.045
 
 # -------------------------
-# INITIAL STATE (3D)
+#    INITIAL STATE (3D)
 # -------------------------
 
 missile_pos = np.array([0.0, 0.0, 0.0])
@@ -26,14 +26,14 @@ target_pos = np.array([18000.0, 5000.0, 35000.0])
 target_vel = np.array([-4200.0, -500.0, -6500.0])
 
 # -------------------------
-# PARAMETERS
+#        PARAMETERS
 # -------------------------
 
 NAV_CONST = 4.0
 MAX_GUIDANCE_ACCEL = 90 * 9.81
 
 # -------------------------
-# SPRINT MODEL
+#       SPRINT MODEL
 # -------------------------
 
 def missile_mass(t):
@@ -53,7 +53,7 @@ def thrust(t):
         return 0.0
 
 # -------------------------
-# AUX
+#           AUX
 # -------------------------
 
 def norm(v):
@@ -74,7 +74,7 @@ def drag_coefficient(speed):
     else: return 0.9
 
 # -------------------------
-# PROPULSION
+#       PROPULSION
 # -------------------------
 
 def propulsion(t, vel, rel_pos):
@@ -95,7 +95,7 @@ def propulsion(t, vel, rel_pos):
     return a, m
 
 # -------------------------
-# GUIDANCE 3D
+#       GUIDANCE 3D
 # -------------------------
 
 def guidance(t, rel_pos, rel_vel):
@@ -120,7 +120,7 @@ def guidance(t, rel_pos, rel_vel):
     return a
 
 # -------------------------
-# DRAG
+#           DRAG
 # -------------------------
 
 def drag(pos, vel, m):
@@ -136,7 +136,7 @@ def drag(pos, vel, m):
     return -(D / m) * unit(vel)
 
 # -------------------------
-# SIMULATION
+#       SIMULATION
 # -------------------------
 
 missile_traj = []
@@ -175,7 +175,7 @@ while t < t_max:
     t += dt
 
 # -------------------------
-# PLOT 3D
+#         PLOT 3D
 # -------------------------
 
 missile_traj = np.array(missile_traj)
@@ -194,6 +194,7 @@ ax.set_title(
     pad=20
 )
 
+# ---------------------------------------------------------------------------
 # trajectories
 missile_line, = ax.plot([], [], [], label="Sprint ABM", color='blue')
 target_line, = ax.plot([], [], [], label="Ogive", color='red')
@@ -210,10 +211,12 @@ target_label = ax.text2D(0, 0, "Ogive", color='red')
 text = ax.text2D(0.05, 0.95, "", transform=ax.transAxes)
 
 ax.legend()
+# ---------------------------------------------------------------------------
 
-# -------------------------
+
+# =========================
 #       ANIMATION
-# -------------------------
+# =========================
 
 def update(frame):
 
@@ -243,8 +246,9 @@ def update(frame):
 
     target_alt_line.set_data([tx, tx], [ty, ty])
     target_alt_line.set_3d_properties([0, tz])
-
-    # HUD
+    # ---------
+    #    HUD
+    # ---------
     v = missile_speed[frame]
     text.set_text(f"Mach {v/343:.1f}")
 
